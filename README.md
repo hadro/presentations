@@ -1,8 +1,8 @@
 # Presentations
 
-[Slides](./iiif_community_update/)  
-December 4, 2018  
+*December 4, 2018*  
+IIIF Community Update  
 Edinburgh, Scotland  
-Community Update  
+[Slides](./iiif_community_update/)
 
 
