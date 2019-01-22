@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+	<html class="sl-root decks export offline loaded">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Record Club: TNG Data Dive</title>
+
+		<meta name="description" content="Celebrating the Record Club: TNG Retreat with some nerdy data analysis">
+
+		<link rel="stylesheet" type="text/css" href="lib/offline-v2.css">
+
+
+
+	</head>
+	<body class="reveal-viewport theme-font-montserrat theme-color-white-blue">
+		<div class="reveal">
+			<div class="slides">
+				<section data-id="cc18b0e63cc686b11166c39dc6362402" data-background-image="record_club_data_dive/c5a1026d1ed5b5a8094e653cf9c03c5f.jpg" data-background-size="contain"><div class="sl-block" data-block-type="text" style="width: 806px; left: 237px; top: 479px; height: auto;" data-block-id="3e8f98aa04797960b5ed2a72b584c086"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="color: rgb(255, 255, 255);">
+<h1>Record Club: TNG<br>
+Data Dive</h1>
+</div></div></section><section data-id="ed82b0fdcc6dcfec3f722e90c617c182"><div class="sl-block" data-block-type="text" style="width: 806px; left: 160px; top: 43px; height: auto;" data-block-id="d3becb0020d952a64041627bc357aa1a"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11; text-align: left;">
+<h2>Origins</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="b876d1711f17096143e3c5fb729b093b" style="height: auto; min-width: 30px; min-height: 30px; width: 920px; left: 160px; top: 180px;"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; text-align: left;" data-fragment-index="0">
+<blockquote>
+<p><span style="color:rgb(17, 17, 17); text-align:start">What’s been a dream of mine for a long time, at least since June? Clearly this: the founding of a casual yet engaging Record Club by six serious music fans who would, once a month, join together at one or another of the founding member’s homes, perhaps with an occasional guest or supportive partner, for food, drink (wine), and, most of all, the communal appreciation of some lovingly hand-picked tunes. That is right, I am proposing a fully extracurricular, unpaid, for-the-love-of-the-game (music) endeavor.</span></p>
+</blockquote>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="daf9f7661fd54b9d723a3226652143da" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 481px; top: 590px;"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; text-align: right;" data-fragment-index="1">
+<p>Scott, email <span style="color:rgb(17, 17, 17); text-align:start"><strong>“Record Club: The Next Generation, a Proposal.”</strong><br>
+2012-09-23</span></p>
+</div></div></section><section data-id="a7a90385b650ae248f2b9ab3714eb77e"><div class="sl-block" data-block-type="text" style="width: 806px; left: 160px; top: 43px; height: auto;" data-block-id="990e915b3c00fea9793a2f18bec52a3c"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; text-align: left;">
+<h2>Rules</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 161px; top: 140px;" data-block-id="0e5cd038526c13af057ee6b426c53367"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left;" data-fragment-index="0">
+<blockquote>
+<ul>
+	<li>I propose that we meet once a month at one of our homes. We each contribute towards some food/drink.</li>
+	<li>I propose that we each bring to the gathering two pieces of music.</li>
+	<li>I propose that there be no restrictions on music selection. Selected pieces can range in genre, date of recording, playtime. Whatever moves you that month and yearns to be shared.</li>
+	<li>I propose that, at the end of each session, an mp3 compilation of the music played is prepared by the hosting member and disseminated to the group.</li>
+</ul>
+
+<p> </p>
+</blockquote>
+</div></div>
+</section><section data-id="b35cd5dea4eb1dcdc3b48b5c60ff6a3b"><div class="sl-block" data-block-type="text" style="width: 270px; left: 996px; top: 85px; height: auto;" data-block-id="8704a023a1e8f5fec39ad73e18330b23"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 12; text-align: left; color: rgb(255, 255, 255); background-color: rgba(255, 153, 0, 0.48);">
+<h2>R Code</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="code" data-block-id="72b3faa77fa9d372fd8132f86aa58808" style="min-width: 30px; min-height: 30px; width: 1280px; height: 720px; left: 0px; top: 0px;"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 116%; border-width: 1px;" data-code-wrap="true" data-highlight-theme="monokai"><pre class="r"><code>#Load tracks
+tracks &lt;- read.csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vQCH5k4HOVnC8E0WZnOZ8zSMEq-Y33A3S5vBamQq-_MJS4AVS7WT0zFaLj_MqO15JKa84MEEyP2ewI9/pub?gid=0&amp;single=true&amp;output=csv')
+
+#Fix dates
+tracks %&gt;%
+  mutate(Date = as.Date(Date, format = '%m/%d/%Y')) -&gt; tracks
+
+#Load people
+people = read.csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vQCH5k4HOVnC8E0WZnOZ8zSMEq-Y33A3S5vBamQq-_MJS4AVS7WT0zFaLj_MqO15JKa84MEEyP2ewI9/pub?gid=978488521&amp;single=true&amp;output=csv')
+
+
+#Merge people info into tracks data, and replace 'Contributor' field with normalized preferred names
+df &lt;- merge(tracks, people) %&gt;%
+  select(-Contributor) %&gt;%
+  rename(Contributor = preferred_name)
+
+#Output table of folks with &gt;10 tracks contributed
+df %&gt;%
+  group_by(Contributor) %&gt;%
+  mutate(count = n()) %&gt;%
+  ungroup()%&gt;%
+  filter( count &gt; 10) %&gt;%
+  rename(
+    track_name = Song,
+    album_name = Album,
+    artist_name = Artist) %&gt;%
+  select(track_name, track_uri, album_name, artist_name, Contributor) %&gt;%
+  filter(!duplicated(track_uri),
+         !is.na(track_uri)) -&gt; df</code></pre></div></div></section><section data-id="eabc29ce3b9a12f34449be0d3f987b7f"><div class="sl-block" data-block-type="text" style="width: 525px; left: 29px; top: 121px; height: auto;" data-block-id="b897421b7ca395cb7471cb0cdcf08c9a"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 11;">
+<h2>Gender Ratio</h2>
+
+<p> </p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 457px; left: 29px; top: 323px; height: auto;" data-block-id="abb428f14f21401b153b6ab8dd16c5a9"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 12; text-align: left;">
+<p>Ratio of contributor gender<br>
+per session</p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="694cc70aa20512c8e150f5588348cb9a" style="min-width: 4px; min-height: 4px; width: 650px; height: 720px; left: 532px; top: 0px;"><div class="sl-block-content" style="z-index: 14;"><img data-natural-width="1219" data-natural-height="1350" style="" data-lazy-loaded="" data-src="record_club_data_dive/06bb5dfd13057ceefbd6e0cfad91694d.png"></div></div></section><section data-id="42a1ca939dde9cc8e25d68d5f797ce30"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 48px; height: auto;" data-block-id="f84acd021f086df0a2e84fbbdf5e089a"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; text-align: left;">
+<h2>Audio features</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 142px; height: auto;" data-block-id="0be4fba4ded671d8f7e956fb9d59f8c4"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left;">
+<ul>
+	<li>acousticness</li>
+	<li>danceability</li>
+	<li>duration</li>
+	<li>energy</li>
+	<li>instrumentalness</li>
+	<li>key*</li>
+	<li>liveness</li>
+	<li>loudness</li>
+	<li>mode*</li>
+	<li>speechiness</li>
+	<li>tempo</li>
+	<li>time signature*</li>
+	<li>valence</li>
+</ul>
+</div></div></section><section data-id="d8b7934dd571844ea818ee79d34f6feb"><div class="sl-block" data-block-type="text" style="width: 531px; left: 29px; top: 121px; height: auto;" data-block-id="900bf74b17574e69ade6c20753c4cbb6"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 11;">
+<h2>Feature Densities</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 413px; left: 29px; top: 195px; height: auto;" data-block-id="0ece688d299cfbb008fab09f609c17c9"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 12; text-align: left;">
+<p>For each audio feature, the statistical distribution of each Contributor's tracks across the possible range of values</p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="a803f00fb2c63e54879b691e71323e8e" style="min-width: 4px; min-height: 4px; width: 519px; height: 720px; left: 601px; top: 0px;"><div class="sl-block-content" style="z-index: 14;"><img style="" data-natural-width="974" data-natural-height="1350" data-lazy-loaded="" data-src="record_club_data_dive/1f67a89f2c2e1979e38eea0a74e9fde1.png"></div></div></section><section data-id="00d63e199dc42346e4b79dd61bf6206c"><div class="sl-block" data-block-type="text" style="width: 413px; left: 29px; top: 84px; height: auto;" data-block-id="fc4bf6bca1c214b382fe55a44af921b5"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 11;">
+<h2>Fingerprints</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 413px; left: 29px; top: 158px; height: auto;" data-block-id="ead03c8c1806807013c4299999449876"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 12; text-align: left;">
+<p>For each contributor, rankings for each audio feature as determined by the average of their contributed track scores within each audio feature</p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="7638cf2dbc817135bf469dd4d8b08959" style="min-width: 4px; min-height: 4px; width: 491px; height: 720px; left: 629px; top: 0px;"><div class="sl-block-content" style="z-index: 14;"><img data-natural-width="921" data-natural-height="1350" style="" data-lazy-loaded="" data-src="record_club_data_dive/c23aefa59818e01756e596fead53044c.png"></div></div></section><section data-id="130894e094654550174290f30e7c38a2"><div class="sl-block" data-block-type="text" style="width: 405px; left: 29px; top: 84px; height: auto;" data-block-id="cbedec0507dbc3d4cba9d3d9a9e14622"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 11;">
+<h2>Correlation Analysis</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 413px; left: 29px; top: 232px; height: auto;" data-block-id="5455f61ffd48418816161554ec187a9c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 13; text-align: left;">
+<p>Pairwise correlation of all the audio features in the dataset</p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="6c9d10830f2351a667a48dd9aab72119" style="min-width: 4px; min-height: 4px; width: 524px; height: 720px; left: 596px; top: 0px;"><div class="sl-block-content" style="z-index: 14;"><img data-natural-width="982" data-natural-height="1350" style="" data-lazy-loaded="" data-src="record_club_data_dive/50ae70671a24a95c4276db454c677ba2.png"></div></div></section><section data-id="58aa0a492c736b54c6a7c28790d4d961"><div class="sl-block" data-block-type="text" data-block-id="f1e1d834ea76a73b8b6b83bc3a3f4720" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 290px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<pre>***** Conclusion *****                            
+ 
+* According to the majority rule, 
+the best number of clusters is <strong> 5 </strong>
+
+Importance of components:
+                          PC1    PC2    PC3     PC4
+Standard deviation     1.3751 1.0050 0.8796 0.57044
+Proportion of Variance 0.4727 0.2525 0.1934 0.08135
+Cumulative Proportion  0.4727 <strong>0.7252</strong> 0.9186 1.00000</pre>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="0167bc6aee9315bd386373b256178073" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 1px; top: 94px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h2>Principle Component Analysis</h2>
+</div></div></section><section data-id="b28eabb4c3de507cd70cb9e76ccf252d"><div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 1280px; height: 212px; left: 0px; top: 280px;" data-block-id="94ed1ceff381557714cc37edd6f44282"><div class="sl-block-content" style="z-index: 11;"><img style="left: -355px; top: -1814px; width: 1767px; height: 2427px;" data-natural-width="982" data-natural-height="1350" data-crop-x="0.200849" data-crop-y="0.747414" data-crop-width="0.724187" data-crop-height="0.087361" data-lazy-loaded="" data-src="record_club_data_dive/3cdc148e0d4c20f8b36e020a5de1e180.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 0px; top: 137px;" data-block-id="72dae14b6561c8b28e5de9344a128caf"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<h2>Clusters</h2>
+</div></div></section><section data-id="3a3c3e5e35dc3660338fe42c50991cb6"><div class="sl-block" data-block-type="text" style="width: 413px; left: 0px; top: 179px; height: auto;" data-block-id="fd6f920b301c30b00ee92a8ca0377908"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 12;">
+<h2>Clustering</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="c9b3ae50d83cf1770e4e0ae62124fc94" style="min-width: 4px; min-height: 4px; width: 789px; height: 720px; left: 411px; top: 0px;"><div class="sl-block-content" style="z-index: 13;"><img data-natural-width="1480" data-natural-height="1350" style="" data-lazy-loaded="" data-src="record_club_data_dive/915c480ec18240b6ae7bf37a68966174.png"></div></div></section><section data-id="1ca6316fb715cf132c6ef8b440cedb0b"><div class="sl-block" data-block-type="text" style="width: 559px; left: 29px; top: 121px; height: auto;" data-block-id="0654deef12ba138b9aec70e9bc6e157d"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 11;">
+<h2>Clustering, faceted by Contributor</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 413px; left: 29px; top: 269px; height: auto;" data-block-id="9188ff3a10762afa79f45e8668e9ca61"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 12; text-align: left;"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat.</p></div></div>
+<div class="sl-block" data-block-type="image" data-block-id="2f0ff8fde003e200af7f67f7a6cc05ee" style="min-width: 4px; min-height: 4px; width: 534px; height: 720px; left: 666px; top: 0px;"><div class="sl-block-content" style="z-index: 14;"><img data-natural-width="1002" data-natural-height="1350" style="" data-lazy-loaded="" data-src="record_club_data_dive/b710f9177babed41ecbf86a2690e8920.png"></div></div></section><section data-id="01184e9f04243b1dc990f10ec1d5e809"><div class="sl-block" data-block-type="text" style="width: 314px; left: 21px; top: 122px; height: auto;" data-block-id="ab1d03629fad4eeea91aee26839f9400"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 12;">
+<h2>Clustering, faceted by Round Theme</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="image" data-block-id="8680a7225fed3d5fe26265d7dc36e761" style="min-width: 4px; min-height: 4px; width: 966px; height: 618px; left: 314px; top: 51px;"><div class="sl-block-content" style="z-index: 11;"><img data-natural-width="768" data-natural-height="1056" style="left: 0px; top: -364px; width: 966px; height: 1328px;" data-crop-x="0" data-crop-y="0.273921" data-crop-width="1" data-crop-height="0.465291" data-lazy-loaded="" data-src="record_club_data_dive/bfdfdca078bc3fc8d4b2f72e88bef0e2.png"></div></div></section><section data-id="0b524e709c12316bcc38a12e2334d1a4"><div class="sl-block" data-block-type="text" style="width: 413px; left: 29px; top: 84px; height: auto;" data-block-id="622dad3c4c6c35459873446f2ee8b651"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 10;">
+<h2>Individual Contributor Clusters</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 413px; left: 29px; top: 306px; height: auto;" data-block-id="fa07d09bf0c08b186dd768923d77c0c5"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 11; text-align: left;">
+<p>20% of your contributed tracks are labeled, to give you a sense of which of your tracks fall into which clusters</p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="c6b28a02d8033c8a6a66b884faf93a6c" style="min-width: 4px; min-height: 4px; width: 783px; height: 720px; left: 432px; top: 0px;"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="1469" data-natural-height="1350" data-lazy-loaded="" data-src="record_club_data_dive/5112afafb2aa15b89bde01969ab88c9c.png"></div></div>
+<div class="sl-block" data-block-type="text" style="width: 166px; left: 1050px; top: 0px; height: auto;" data-block-id="f92f5d64b6cb270d77794e0a7ed4b285"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 14;">
+<h2>Scott</h2>
+</div></div></section><section data-id="ea94a710f50a141807130ba0530c846f"><div class="sl-block" data-block-type="text" style="width: 413px; left: 29px; top: 84px; height: auto;" data-block-id="72cf2eba39f5629bb851107538352c91"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 11;">
+<h2>Individual Contributor Clusters</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 413px; left: 29px; top: 306px; height: auto;" data-block-id="b5a9b04c40f8a741e938ee2f012b863a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 12; text-align: left;">
+<p>20% of your contributed tracks are labeled, to give you a sense of which of your tracks fall into which clusters</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 166px; left: 1048px; top: 0px; height: auto;" data-block-id="78b3b50ce9dbe460d3a84265a16aaa65"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 13;">
+<h2>Josh</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="e94a12ba836d17271278faa90b22b46b" style="min-width: 4px; min-height: 4px; width: 783px; height: 720px; left: 431px; top: 0px;"><div class="sl-block-content" style="z-index: 10;"><img data-natural-width="1469" data-natural-height="1350" style="" data-lazy-loaded="" data-src="record_club_data_dive/90e10fc0701cb4701f07f41ae24b62f1.png"></div></div></section><section data-id="8637e1e9e5f193541e9104eaf926a4fb" data-background-interactive="true" data-background-iframe="https://phantor.net/record_club/rc_tng_clusters.html"></section><section data-background-interactive="true" data-id="4b399244bb6d18e7fd1c3cb45ec00857" data-background-iframe="https://phantor.net/record_club/3d.html"></section><section data-id="db0c72dd6c575b8545a5e44a2a470d95"><div class="sl-block" data-block-type="text" style="width: 1076px; left: 102px; top: 274px; height: auto;" data-block-id="26ce1b53e21e2f48c5d793e18140ede3"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Here's to six more years!</h1>
+</div></div></section>
+			</div>
+		</div>
+
+		<script>
+			var SLConfig = {"deck": {"id":1410999,"slug":"record_club_data_dive","title":"Record Club: TNG Data Dive","description":"Celebrating the Record Club: TNG Retreat with some nerdy data analysis","width":1280,"height":720,"visibility":"self","published_at":null,"sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/460e20e10de7cd1937db26b0f4a2eaee/thumb.jpg?1547697271","view_count":0,"user":{"id":940984,"username":"hadro","name":"Josh Hadro","description":"","thumbnail_url":"https://www.gravatar.com/avatar/eead64f9618456ab09ed525ea7922743?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","paid":true,"pro":false,"lite":true,"team_id":null,"settings":{"id":1995979,"present_controls":true,"present_upsizing":true,"present_pointer":true,"present_notes":false,"default_deck_tag_id":null}},"background_transition":"slide","transition":"slide","theme_id":null,"theme_font":"montserrat","theme_color":"white-blue","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":false,"rolling_links":false,"center":false,"shuffle":false,"should_loop":false,"share_notes":false,"slide_number":false,"slide_count":19,"rtl":false,"version":2,"collaborative":true,"deck_user_editor_limit":1,"data_updated_at":1548169715045,"font_typekit":null,"font_google":null,"notes":{"cc18b0e63cc686b11166c39dc6362402":"","0cd25d89d6ed7433bb011e875889dde9":"","42a1ca939dde9cc8e25d68d5f797ce30":"","d8b7934dd571844ea818ee79d34f6feb":"","00d63e199dc42346e4b79dd61bf6206c":"","eabc29ce3b9a12f34449be0d3f987b7f":"","ed82b0fdcc6dcfec3f722e90c617c182":"Scott's founding email","a7a90385b650ae248f2b9ab3714eb77e":"The original proposed rules","130894e094654550174290f30e7c38a2":"","6981dbdea8f67eb02884472fbd5e3320":"","7fe645a70f001e2fe8ea7688b825932b":"","3a3c3e5e35dc3660338fe42c50991cb6":"","522c6e408b9285da4273d372557d749c":"","1ca6316fb715cf132c6ef8b440cedb0b":"","58aa0a492c736b54c6a7c28790d4d961":"","0b524e709c12316bcc38a12e2334d1a4":"","b28eabb4c3de507cd70cb9e76ccf252d":"","8637e1e9e5f193541e9104eaf926a4fb":"","2309a8d7c13c6873b63d857688669d93":"","4b399244bb6d18e7fd1c3cb45ec00857":"","db0c72dd6c575b8545a5e44a2a470d95":"","ea94a710f50a141807130ba0530c846f":"","01184e9f04243b1dc990f10ec1d5e809":"","b35cd5dea4eb1dcdc3b48b5c60ff6a3b":""}}};
+
+
+			// Use local fonts
+			SLConfig.fonts_url = 'lib/fonts/';
+		</script>
+
+		<script src="lib/reveal.min.js"></script>
+		<script src="lib/offline.js"></script>
+
+		<!-- Initialize the presentation -->
+		<script>
+			Reveal.initialize({
+				width: 1280,
+				height: 720,
+				margin: 0.05,
+
+				hash: true,
+				controls: true,
+				progress: true,
+				mouseWheel: false,
+				showNotes: false,
+				slideNumber: false,
+
+				autoSlide: 0,
+				autoSlideStoppable: true,
+
+				center: false,
+				shuffle: false,
+				loop: false,
+				rtl: false,
+
+				transition: "slide",
+				backgroundTransition: "slide",
+
+				dependencies: [
+					{ src: 'lib/reveal-plugins/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'lib/reveal-plugins/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'lib/reveal-plugins/highlight/highlight.js', async: true, callback: function() { hljs.initHighlighting(); hljs.initHighlightingOnLoad(); } },
+					{ src: 'lib/reveal-plugins/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'lib/reveal-plugins/zoom/zoom.js', async: true }
+				]
+			});
+		</script>
+
+		
+
+	</body>
+</html>
