@@ -50,14 +50,14 @@ Data Dive</h1>
 </div></div>
 
 <div class="sl-block" data-block-type="code" data-block-id="72b3faa77fa9d372fd8132f86aa58808" style="min-width: 30px; min-height: 30px; width: 1280px; height: 720px; left: 0px; top: 0px;"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 116%; border-width: 1px;" data-code-wrap="true" data-highlight-theme="monokai"><pre class="r"><code>#Load tracks
-tracks &lt;- read.csv('https://docs.google.com/spreadsheets/d/e/1PACX-1vQCH5k4HOVnC8E0WZnOZ8zSMEq-Y33A3S5vBamQq-_MJS4AVS7WT0zFaLj_MqO15JKa84MEEyP2ewI9/pub?gid=0&amp;single=true&amp;output=csv')
+tracks &lt;- read.csv('https://docs.google.com/spreadsheets/d/e/1PACX-1vQCH5k4HOVnC8E0WZnOZ8zSMEq-Y33A3S5vBamQq/pub?gid=0&amp;single=true&amp;output=csv')
 
 #Fix dates
 tracks %&gt;%
   mutate(Date = as.Date(Date, format = '%m/%d/%Y')) -&gt; tracks
 
 #Load people
-people = read.csv('https://docs.google.com/spreadsheets/d/e/1PACX-1vQCH5k4HOVnC8E0WZnOZ8zSMEq-Y33A3S5vBamQq-_MJS4AVS7WT0zFaLj_MqO15JKa84MEEyP2ewI9/pub?gid=978488521&amp;single=true&amp;output=csv')
+people = read.csv('https://docs.google.com/spreadsheets/d/e/1PACX-1vQCH5k4HOVnC8E0WZnOZ8zSMEq-Y33A3S5vBamQq/pub?gid=978488521&amp;single=true&amp;output=csv')
 
 
 #Merge people info into tracks data, and replace 'Contributor' field with normalized preferred names
