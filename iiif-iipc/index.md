@@ -52,7 +52,8 @@ Takes any item with [a IIIF manifest](https://iiif.io/get-started/how-iiif-works
 ---
 
 ### The pipeline
-&nbsp;&nbsp;&nbsp;&nbsp;Download files 
+IIIF Manifest  
+→ Download files 
 → Select sample pages* 
 → Generate OCR + NER prompts 
 → Run LLM OCR 
